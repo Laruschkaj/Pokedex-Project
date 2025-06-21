@@ -11,11 +11,26 @@
 <body>
     <div id="root"></div>
 
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <!-- CORRECTED React and ReactDOM CDNs (order matters!) -->
+    <!-- These links specify the version (e.g., 18 for React 18) -->
+    <!-- You can also use a direct link to the latest development build without a specific version, but specifying is safer for consistency -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- OR, if you just want latest dev builds without specific version: -->
+    <!-- <script src="https://unpkg.com/react/umd/react.development.js"></script> -->
+    <!-- <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script> -->
+    <!-- However, the ones I provided initially, and you might have copied, sometimes need the version -->
 
+    <!-- Let's ensure we use the links that are known to work reliably. -->
+    <!-- The most robust Unpkg links for in-browser development are usually like this: -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- (Using React 17 here as it's common in older tutorials for standalone babel setup) -->
+
+    <!-- Babel CDN (this one is usually fine) -->
     <script src="https://unpkg.com/babel-standalone"></script>
 
+    <!-- Your React components -->
     <script src="src/Pokecard.js" type="text/babel"></script>
     <script src="src/Pokedex.js" type="text/babel"></script>
     <script src="src/Pokegame.js" type="text/babel"></script>
